@@ -68,7 +68,7 @@ def path_leaf(path):
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
 
-def checkEmpty():
+def checkEmpty( deep_v = 'deepmg'):
         if dig.lineFile1.text() == "":
             dig.lineFile1.setFocus()
             dig.lineFile1.setPlaceholderText("Data with csv extension should be provided")
@@ -129,9 +129,10 @@ def checkEmpty():
             return
         else:
             comboText4 = dig.cbColormap.currentText()
-        run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4)
 
-        pathfile_main_deepmg= os.path.join(pathlib.Path.cwd(),'deepmg_v37','__main__.py')
+        pathfile_main_deepmg = run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4)
+
+        #pathfile_main_deepmg= os.path.join( pathlib.Path.cwd(), deep_v, '__main__.py')
 
         if k_fold in ['']:
             k_fold = 2
@@ -210,8 +211,8 @@ def xuly1_2(data,label,command):
         conn.close()
 
 # nthai: this place starts the experiment
-def run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4,deep_v='deepmg_v37'):
-        #command = f"python C:\LV\GSOM-Application\deepmg_v37\__main__.py -i {d} -t {comboText1} -y {comboText2} -z 255 " \
+def run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4,deep_v='deepmg'):
+        #command = f"python C:\LV\GSOM-Application\deepmg\__main__.py -i {d} -t {comboText1} -y {comboText2} -z 255 " \
         #          f"--preprocess_img {comboText3} --colormap {comboText4} -k {k_fold}  --search_already n --channel 3 "\
         #          f"--save_w y "
 
@@ -334,7 +335,9 @@ def run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4,deep_v='
             FileSumOk(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4)
         history()
 
-def modelcheckrun():# numlayer,numfilter,save_d,model_cnn,comboxSearch = checkEmpty()
+        return pathfile_main_deepmg
+
+def modelcheckrun( deep_v = 'deepmg') : # numlayer,numfilter,save_d,model_cnn,comboxSearch = checkEmpty()
         data = dig.lineFile1.text()
         label = dig.lineFile2.text()
         
@@ -362,7 +365,17 @@ def modelcheckrun():# numlayer,numfilter,save_d,model_cnn,comboxSearch = checkEm
 
         linkfileh5 = linkfileh5.rstrip('.h5')
 
-        pathfile_main_deepmg= os.path.join(pathlib.Path.cwd(),'deepmg_v37','__main__.py')
+        print('pathlib.Path.cwd()====')
+        print(pathlib.Path.cwd())
+        print('deep_v====')
+        print(deep_v)
+        
+        if deep_v is False:
+            deep_v = 'deepmg'
+
+        pathfile_main_deepmg = os.path.join( str( pathlib.Path.cwd()),deep_v,'__main__.py')
+        print('pathfile_main_deepmg====')
+        print(pathfile_main_deepmg)
 
         if k_fold in ['']:
             k_fold = 2
