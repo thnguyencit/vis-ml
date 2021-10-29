@@ -1,0 +1,23 @@
+/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/images/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/s1/nfold2/k1/val_36.png
+/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/images/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/s1/nfold2/k1/val_22.png
+###folder_pathfolder_pathfolder_path####
+/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/
+folder_files###folder_files###folder_files###folder_files###
+['/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/predict20210512_123136_24circnnfile_sum_ok.txt', '/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/a1_k2_nonecaffe_estopc5_fc_o1adam_lr-1.0de0.0e500_20210512_131904c255.0di-1ch3dfc0.0file_sum_ok.txt', '/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/a1_k2_nonecaffe_estopc5_fc_o1adam_lr-1.0de0.0e500_20210512_130344c255.0di-1ch3dfc0.0file_sum_ok.txt']
+/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_fillspix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0/a1_k2_nonecaffe_estopc5_fc_o1adam_lr-1.0de0.0e500_20210512_131904c255.0di-1ch3dfc0.0file_sum_ok.txt
+
+
+###folder_pathfolder_pathfolder_path####
+/Users/hainguyen/Documents/nthai/ctu/nthai-2020/old-archived/PhD/workspace/deepmg_app/results/cirphy_pca_p5l100.0i300pix_r0p1.0spbm0.0a1.0rainbow_nb10_aun_0.0_1.0
+folder_files###folder_files###folder_files###folder_files###
+[]
+Traceback (most recent call last):
+  File "mainWindows.py", line 130, in checkEmpty
+    run(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4)
+  File "mainWindows.py", line 321, in run
+    FileSumOk(data,label,d,k_fold,comboText1,comboText2,comboText3,comboText4)
+  File "mainWindows.py", line 559, in FileSumOk
+    print (files)
+ValueError: max() arg is an empty sequence
+zsh: abort      python mainWindows.py
+(base) hainguyen@hainguyenct deepmg_app % 

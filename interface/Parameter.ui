@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Parameter</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>531</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>511</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="5" column="2">
+      <widget class="QComboBox" name="cbOptimizer">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>sgd</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>adam</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Adamax</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>RMSprop</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Adagrad</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Adadelta</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Nadam</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Opt Func</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="6">
+      <widget class="QLineEdit" name="lineCmapvmin"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QComboBox" name="cbModel">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>model_cnn</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>model_vgglike</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>model_lstm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>resnet50</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rf_model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>dtc_model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gbc_model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>svm_model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>knn_model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>none</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>New Dim</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>METHOD_LLE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QComboBox" name="cbSVM">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>linear</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>poly</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rbf</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>sigmoid</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>precomputed</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLineEdit" name="lr_visual"/>
+     </item>
+     <item row="10" column="2">
+      <widget class="QComboBox" name="cbMethodLLE">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>standard</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ltsa</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>hessian</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>modified</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Loss Func</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>ITER_VISUAL</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>DEL 0  </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="5">
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>CMAP_VMAX</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="5">
+      <widget class="QLabel" name="label_17">
+       <property name="text">
+        <string>N_QUANTILE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>CMAP_VMIN</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="5">
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>Coefficient</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="5">
+      <widget class="QLabel" name="label_18">
+       <property name="text">
+        <string>NUM_BIN</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLineEdit" name="lineIterVisual"/>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Dim Reduction</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QComboBox" name="cbLossfunc">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>binary_crossentropy</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mae</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>squared_hinge</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>categorical_crossentropy</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Kernel SVM</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>KNN_N_NEIGHBORS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+
+     <item row="3" column="5">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Figure size</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+
+     <item row="12" column="2">
+      <widget class="QComboBox" name="cbModeReduceDim">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pca</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rd_pro</string>
+        </property>
+       </item>
+        <item>
+        <property name="text">
+         <string>pwbf</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QLineEdit" name="lineCmapvmax"/>
+     </item>
+     <item row="3" column="6">
+      <widget class="QLineEdit" name="fig_size"/>
+     </item>
+     <item row="8" column="6">
+      <widget class="QLineEdit" name="lineQuantile"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>PADDING </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Learning rate Visualization</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="6">
+      <widget class="QLineEdit" name="lineLossfunc"/>
+     </item>
+     <item row="4" column="2">
+      <widget class="QComboBox" name="cbDelo">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="12" column="5">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>LOSS_FUNC</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="6">
+      <widget class="QLineEdit" name="lineKnnN"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="cbPadding">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="10" column="6">
+      <widget class="QLineEdit" name="lineNumBin"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Model </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>Run Time</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineRuntime"/>
+     </item>
+     <item row="13" column="2">
+      <widget class="QLineEdit" name="newdim"/>
+     </item>
+     <item row="13" column="6">
+      <widget class="QLineEdit" name="cbCoffe"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pBtnApply">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>400</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>529</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>3</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

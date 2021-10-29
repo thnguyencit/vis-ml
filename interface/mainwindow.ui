@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>976</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Visualization Approach and Deep learning for Multi-dimensionality Data</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>261</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Label file</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>K =</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Data file</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pBtChooseFile1">
+       <property name="text">
+        <string>Choose File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Representation</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Colormap</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineFile1"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Preprocess_IMG</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Binning</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="lineK"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="lineFile2"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pBtChooseFile2">
+       <property name="text">
+        <string>Choose File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QComboBox" name="cbEMB">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>fills</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>isomap</string>
+        </property>
+       </item>
+        <item>
+        <property name="text">
+         <string>pca</string>
+        </property>
+       </item>
+               <item>
+        <property name="text">
+         <string>mds</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>se</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>tsne</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>minisom</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QComboBox" name="cbBin">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>spb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>eqw</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pr</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>eqf</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QComboBox" name="cbPreIMG">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>none</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>resnet50</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>vgg16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>vgg19</string>
+        </property>
+       </item>
+
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QComboBox" name="cbColormap">
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rainbow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>nipy_spectral</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Paired</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reds</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>YlGnBu</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gray</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>custom</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="12" column="0" colspan="2">
+      <widget class="QPushButton" name="pBtRun">
+       <property name="text">
+        <string>Learn and Test</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0" colspan="2">
+      <widget class="QPushButton" name="pBtModel">
+       <property name="text">
+        <string>Load Model</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>10</y>
+      <width>611</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pBtParameter">
+       <property name="text">
+        <string>Parameter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pBtCompare">
+       <property name="text">
+        <string>Compare</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pBtReload">
+       <property name="text">
+        <string>Reload</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>416</y>
+      <width>150</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>History</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pBtDetail">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>90</y>
+      <width>150</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Detail on Data</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pBtnShow_Img">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>160</y>
+      <width>150</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Image</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="link_Image">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>160</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pBtnImage">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>160</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Folder</string>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>671</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>669</width>
+       <height>329</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pBtnChart">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>50</y>
+      <width>150</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Charts</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="list_hisstory">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>261</width>
+      <height>171</height>
+     </rect>
+    </property>
+   </widget>
+
+   <widget class="QTableWidget" name="tbguess">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>530</y>
+      <width>671</width>
+      <height>81</height>
+     </rect>
+    </property>
+    
+    <property name="rowCount">
+     <number>2</number>
+    </property>
+    <property name="columnCount">
+     <number>7</number>
+    </property>
+
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+
+   <widget class="QTableWidget" name="tbguess_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>50</y>
+      <width>501</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="rowCount">
+     <number>500</number>
+    </property>
+    <property name="columnCount">
+     <number>4</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>976</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
