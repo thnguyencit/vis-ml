@@ -16,7 +16,8 @@ dl = uic.loadUi("./interface/compare.ui")
 
 class MplCanvas(FigureCanvasQTAgg):
 
-    def __init__(self, parent=None, width=5, height=4, dpi=10):
+    #def __init__(self, parent=None, width=5, height=4, dpi=10):
+    def __init__(self, parent=None, width=5, height=4, dpi=5):
         fig = Figure(figsize=(width, height), dpi=dpi)
         # self.axes = fig.add_axes([0,0,1,1])
         self.axes = fig.add_subplot(111)
@@ -50,7 +51,8 @@ def add_value_labels(ax, spacing=5):
             va = 'top'
 
         # Use Y value as label and format number with one decimal place
-        label = "{:.1f}".format(y_value)
+        # thiet lap con so thap phan hien thi ket qua
+        label = "{:.3f}".format(y_value)
 
         # Create annotation
         ax.annotate(
@@ -111,8 +113,8 @@ def FileSumOk1():
         # with width = 0.6
         # with bar colors = green
         # bargraph = pg.BarGraphItem(x = x, height = y1, width = 0.05, brush ='g')
-        sc = MplCanvas(None, width=1, height=1, dpi=50)
-        sc.axes.bar(label, y1, width=0.6)
+        sc = MplCanvas(None, width=1, height=1, dpi=70)
+        sc.axes.bar(label, y1, width=0.5)
         add_value_labels(sc.axes)
         content_widget = QtWidgets.QWidget()
         dl.showchart1.setWidget(content_widget)
@@ -157,6 +159,7 @@ def FileSumOk2():
         # x = np.asarray(x)
         arr = x[j].split()
         arr1 = x[j+1].split()
+        print('arr[1] bieu do==')
         print(arr[1])
 
 
@@ -165,20 +168,25 @@ def FileSumOk2():
         # label = [arr[0], arr[1], arr[2], arr[4]]
         # print(label)
 
-        y1 = [float(arr1[1]), float(arr1[2]), float(arr1[4]), float(arr1[16])]
+        y1 = [ np.round(float(arr1[1]),3), np.round(float(arr1[2]),3), np.round(float(arr1[4]),3), np.round(float(arr1[16]),3)]
+        #y1 = [ np.round(float(arr1[1]),3), float(arr1[2]), float(arr1[4]), float(arr1[16])]
         print(y1)
         # label of arr        
+        #label = [arr[1], arr[2], arr[4], arr[16]]
         label = [arr[1], arr[2], arr[4], arr[16]]
         # nthai
         print("processing in compare.py")
+        print('label===')
         print(label)
+        print('y1===')
+        print(y1)
 
         # create pyqt5graph bar graph item
         # with width = 0.6
         # with bar colors = green
         # bargraph = pg.BarGraphItem(x = x, height = y1, width = 0.05, brush ='g')
-        sc = MplCanvas(None, width=1, height=1, dpi=50)
-        sc.axes.bar(label, y1, width=0.6)
+        sc = MplCanvas(None, width=1, height=1, dpi=70)
+        sc.axes.bar(label, np.round(y1,3), width=0.5)
         add_value_labels(sc.axes)
         content_widget = QtWidgets.QWidget()
         dl.showchart2.setWidget(content_widget)
@@ -186,12 +194,13 @@ def FileSumOk2():
         layout.addWidget(sc)
         content_widget.setLayout(layout)
         
-
+        # hienthi bang ket qua, bang voi 4 cot hien thi ket qua acc (train+test), auc, mcc
         dl.tbguess2.setItem(0, 0, QTableWidgetItem(arr[1]))
         dl.tbguess2.setItem(0, 1, QTableWidgetItem(arr[2]))
         dl.tbguess2.setItem(0, 2, QTableWidgetItem(arr[4]))
         dl.tbguess2.setItem(0, 3, QTableWidgetItem(arr[16]))
         # dl.tbguess1.setItem(0, 4, QTableWidgetItem(arr[4]))
+        # dl.tbguess2.setItem(1, 0, QTableWidgetItem(np.round(float(arr1[1]),3)))
         dl.tbguess2.setItem(1, 0, QTableWidgetItem(arr1[1]))
         dl.tbguess2.setItem(1, 1, QTableWidgetItem(arr1[2]))
         dl.tbguess2.setItem(1, 2, QTableWidgetItem(arr1[4]))
@@ -215,6 +224,10 @@ def FileSumOk2():
 def drawchart12():
     data1 = dl.lineChooseFile1.text()
     data2 = dl.lineChooseFile2.text()
+    print('data1===')
+    print(data1)
+    print('data2===')
+    print(data2)
     i1 = 0
     j1 = 0
     i2 = 0
@@ -241,6 +254,7 @@ def drawchart12():
     print(y1)
     # create horizontal list i.e x-axis
     #label = [arr[0], arr[1], arr[2], arr[4]]
+    #label = [float(arr[1]), float(arr[2]), float(arr[4]), float(arr[16])]
     label = [arr[1], arr[2], arr[4], arr[16]]
     #label = [arr[0], arr[1], arr[2], arr[4]]
 
@@ -259,16 +273,23 @@ def drawchart12():
     
     y2 = [float(arr2[1]), float(arr2[2]), float(arr2[4]), float(arr2[16])]
     #y2 = [float(arr2[0]), float(arr2[1]), float(arr2[2]), float(arr2[4])]
+    print('y2==')
     print(y2)
-
-    sc = MplCanvas(None, width=1, height=1, dpi=50)
+    # setup kich thuoc bieu do dpi cang lon thi text hien thi cang lon
+    sc = MplCanvas(None, width=1, height=1, dpi=70)
+    #sc = MplCanvas(None, width=1, height=1, dpi=50)
     width=0.35
     ind = np.arange(len(y1))
+    print('ind==')
+    print(ind)
+    print('label==')
+    print(label)
     sc.axes.bar(ind - width/2, y1, width=0.35,label="Method 1")
     sc.axes.bar(ind + width/2, y2, width=0.35,label="Method 2")
     sc.axes.set_xticks(ind)
     sc.axes.set_xticklabels(label)
-    sc.axes.legend()
+    #sc.axes.legend()
+    sc.axes.legend(bbox_to_anchor=(1.1, 1.05))
     add_value_labels(sc.axes)
     content_widget = QtWidgets.QWidget()
     dl.showchart1_2.setWidget(content_widget)

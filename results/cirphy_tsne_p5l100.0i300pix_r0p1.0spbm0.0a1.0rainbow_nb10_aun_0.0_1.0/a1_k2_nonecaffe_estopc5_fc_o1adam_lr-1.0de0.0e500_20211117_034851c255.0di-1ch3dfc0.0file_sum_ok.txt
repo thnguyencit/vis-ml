@@ -1,0 +1,26 @@
+{'type_run': 'learn', 'config_file': '', 'seed_value_begin': 1, 'search_already': 'n', 'cudaid': -3, 'gpu_memory_fraction': 0.0, 'rd_pr_seed': 'none', 'debug': 'n', 'check': 'n', 'n_folds': 2, 'test_ext': 'n', 'run_time': 1, 'whole_run_time': 1, 'test_size': 1.0, 'parent_folder_img': 'images', 'original_data_folder': 'data', 'data_name': 'cirphy', 'parent_folder_results': 'results', 'save_avg_run': 'n', 'save_labels': 'n', 'save_d': 'n', 'save_w': 'y', 'suff_fini': 'ok', 'save_rf': 'y', 'save_para': 'n', 'path_config_w': '', 'ext_data': '', 'save_entire_w': 'n', 'save_folds': 'y', 'sound_fini': 'n', 'pretrained_w_path': '', 'path_vis_learn': '', 'path_data_vis_learn': '', 'transpose_data': 'y', 'del0': 'n', 'preprocess_img': 'none', 'dim_img': -1, 'visualize_model': 'n', 'algo_redu': 'none', 'reduc_perle': 10, 'reduc_ini': 'pca', 'imp_fea': 'none', 'label_emb': 0, 'emb_data': '', 'type_bin': 'spb', 'cmap_vmin': 0.0, 'cmap_vmax': 1.0, 'scale_mode': '', 'n_quantile': 1000, 'min_scale': 0.0, 'max_scale': 1.0, 'min_v': 0.0, 'max_v': 1.0, 'num_bin': 10, 'auto_v': 'n', 'type_emb': 'tsne', 'orderf_fill': 'none', 'new_dim': 676, 'lr_visual': 100.0, 'label_visual': '', 'iter_visual': 300, 'ini_visual': 'pca', 'method_lle': 'standard', 'eigen_solver': 'auto', 'mode_pre_img': 'caffe', 'perlexity_neighbor': 5, 'n_components_emb': 2, 'shape_drawn': ',', 'fig_size': 0, 'point_size': 1.0, 'colormap': 'rainbow', 'margin': 0.0, 'alpha_v': 1.0, 'recreate_img': 0, 'vis_nclusters': 10, 'bs_vis_kmeans': None, 'log_file': None, 'grid_coef_time': 10, 'cv_coef_time': 4, 'coef_ini': 255.0, 'metric_selection': 'roc_auc', 'model': 'fc_model', 'channel': 3, 'numfilters': 64, 'numlayercnn_per_maxpool': 1, 'nummaxpool': 1, 'dropout_cnn': 0.0, 'dropout_fc': 0.0, 'padding': 'n', 'filtersize': 3, 'poolsize': 2, 'num_classes': 1, 'epoch': 500, 'learning_rate': -1.0, 'batch_size': 16, 'learning_rate_decay': 0.0, 'momentum': 0.0, 'optimizer': 'adam', 'loss_func': 'binary_crossentropy', 'e_stop': 5, 'e_stop_consec': 'consec', 'svm_c': 1.0, 'svm_kernel': 'linear', 'rf_n_estimators': 500, 'rf_max_features': -2, 'rf_max_depth': -1, 'knn_n_neighbors': 5, 'coeff': 255.0}
+[]
+bins for classification
+[62621   172    41    23     8     4     1     2     0     0]
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+[62613   169    52    17    11     5     4     1     0     0]
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+time_read_or/and_create_img=16.26221990585327
+seed1 fold1/2###############seed1 fold1/2###############seed1 fold1/2
+after training
+t_acc--v_acc--t_auc--v_auc--t_los--v_los--v_mmc--tn--fp--fn--tp--time--ep_stopped
+0.991++0.871++0.998++0.937++0.11++0.316++0.744++52.0++5.0++10.0++49.0++46.45++500.0
+bins for classification
+[62613   169    52    17    11     5     4     1     0     0]
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+[62621   172    41    23     8     4     1     2     0     0]
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+time_read_or/and_create_img=13.502718925476074
+seed1 fold2/2###############seed1 fold2/2###############seed1 fold2/2
+after training
+t_acc--v_acc--t_auc--v_auc--t_los--v_los--v_mmc--tn--fp--fn--tp--time--ep_stopped
+0.974++0.845++0.994++0.92++0.155++0.361++0.69++48.0++9.0++9.0++50.0++69.994++302.0
+time	tr_ac	va_ac	sd	va_au	sd	tn	fn	fp	tp	preci	sd	recall	sd	f1	sd	mcc	sd	epst
+70.0	0.983	0.858	0.0	0.929	0.0	50.0	9.5	7.0	49.5	0.877	0.0	0.839	0.0	0.857	0.0	0.717	0.0	401.0
+tr_ac_a	sd_ac	va_ac_a	sd_ac	tr_au_a	sd_au	va_au_a	sd_au	va_mc_a	sd_mc
+0.9827586114406586	0.00862070918083191	0.8577586114406586	0.012931019067764282	0.9962830805828129	0.0019327980969371938	0.9287838239666963	0.008474576271186474	0.7170070806353097	0.027444190358770826
